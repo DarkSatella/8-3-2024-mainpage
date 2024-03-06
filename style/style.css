@@ -1,0 +1,99 @@
+
+#myImg1 {
+  max-width: 100%; /* Ensures image doesn't exceed container width */
+  max-height: 100%; /* Ensures image doesn't exceed container height */
+  object-fit: cover; /* Maintains aspect ratio while covering container */
+  display: block;
+  margin: 0 auto;
+}
+
+#myImg2 {
+  max-width: 100%; /* Ensures image doesn't exceed container width */
+  max-height: 100%; /* Ensures image doesn't exceed container height */
+  object-fit: cover; /* Maintains aspect ratio while covering container */
+  display: block;
+  margin: 0 auto;
+}
+
+#myButtonDesktop {
+  /* Remove default button styles */
+  background: none;
+  border: none;
+  padding: 0;
+  /*Hide text content */
+  text-indent: 0%;
+  white-space: nowrap;
+  max-width: 20%; /* Resize to 50% of its original width */
+  max-height: 20%; /* Adjust height automatically to maintain aspect ratio */
+  cursor: pointer;
+  z-index: 2;
+}
+
+#myButtonMobile {
+  /* Remove default button styles */
+  background: none;
+  border: none;
+  padding: 0;
+  /*Hide text content */
+  text-indent: 0%;
+  white-space: nowrap;
+  max-width: 20%; /* Resize to 50% of its original width */
+  max-height: 20%; /* Adjust height automatically to maintain aspect ratio */
+  cursor: pointer;
+  z-index: 2;
+}
+
+.present-box-container-mobile {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  cursor: pointer;
+}
+
+.present-box-container-desktop {
+  position: absolute;
+  top: 40%;
+  left: 55%;
+  cursor: pointer;
+}
+
+#myImg1:hover {
+  /* Add a hover effect if desired */
+  transform: scale(1.01);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#myImg2:hover {
+  /* Add a hover effect if desired */
+  transform: scale(1.01);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#myButton1.fade-out {
+  opacity: 0; /* Fade out the button */
+  transition: opacity 0.5s ease-out; /* Add a smooth fade effect */
+}
+
+#myButton2.fade-out {
+  opacity: 0; /* Fade out the button */
+  transition: opacity 0.5s ease-out; /* Add a smooth fade effect */
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+}
+
+#light-pink-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/background.jpg);
+  z-index: 0; /* Ensure overlap */
+}
