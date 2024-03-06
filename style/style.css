@@ -1,4 +1,14 @@
 
+#chooseOption {
+  font-size: 4vw;
+  color: #b95ad6;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  font-family: "Work Sans", sans-serif;
+}
+
 #myImg1 {
   max-width: 100%; /* Ensures image doesn't exceed container width */
   max-height: 100%; /* Ensures image doesn't exceed container height */
@@ -15,68 +25,52 @@
   margin: 0 auto;
 }
 
-#myButtonDesktop {
-  /* Remove default button styles */
-  background: none;
-  border: none;
-  padding: 0;
-  /*Hide text content */
-  text-indent: 0%;
-  white-space: nowrap;
-  max-width: 20%; /* Resize to 50% of its original width */
-  max-height: 20%; /* Adjust height automatically to maintain aspect ratio */
-  cursor: pointer;
-  z-index: 2;
-}
-
-#myButtonMobile {
-  /* Remove default button styles */
-  background: none;
-  border: none;
-  padding: 0;
-  /*Hide text content */
-  text-indent: 0%;
-  white-space: nowrap;
-  max-width: 20%; /* Resize to 50% of its original width */
-  max-height: 20%; /* Adjust height automatically to maintain aspect ratio */
-  cursor: pointer;
-  z-index: 2;
-}
-
 .present-box-container-mobile {
   position: absolute;
-  top: 40%;
-  left: 35%;
+  width: 20%;
+  height: 20%;
+  top: 30%;
+  left: 20%;
   cursor: pointer;
 }
 
 .present-box-container-desktop {
   position: absolute;
-  top: 40%;
-  left: 55%;
+  width: 20%;
+  height: 20%;
+  top: 30%;
+  left: 60%;
   cursor: pointer;
 }
 
-#myImg1:hover {
-  /* Add a hover effect if desired */
+#myButtonDesktop, #myButtonMobile {
+  /* Remove default button styles */
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 3vw;
+  font-family: "Work Sans", sans-serif;
+  /*Hide text content */
+  text-indent: 0%;
+  white-space: nowrap;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 1; /* Initial opacity */
+  transition: opacity 0.5s ease-out; /* Add a smooth fade effect */
+}
+
+.present-box-container-desktop button:hover {
   transform: scale(1.01);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-#myImg2:hover {
-  /* Add a hover effect if desired */
+.present-box-container-mobile button:hover {
   transform: scale(1.01);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-#myButton1.fade-out {
-  opacity: 0; /* Fade out the button */
-  transition: opacity 0.5s ease-out; /* Add a smooth fade effect */
-}
-
-#myButton2.fade-out {
-  opacity: 0; /* Fade out the button */
-  transition: opacity 0.5s ease-out; /* Add a smooth fade effect */
+#myButtonDesktop.clicked, #myButtonMobile.clicked {
+  opacity: 0; /* Faded out state */
 }
 
 html {
@@ -85,7 +79,6 @@ html {
 
 body {
   margin: 0;
-  font-family: "Work Sans", sans-serif;
 }
 
 #light-pink-overlay {

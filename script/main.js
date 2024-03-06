@@ -1,8 +1,12 @@
-const myButton = document.getElementById('myButton');
+const myButtonMobile = document.getElementById('myButtonMobile');
+const myButtonDesktop = document.getElementById('myButtonDesktop');
 
+myButtonMobile.addEventListener('click', () => {
+  myButtonMobile.classList.add('clicked');
+  window.location.href = "https://darksatella.github.io/8-3-Class12T1-2024-Mobile/";
+});
 
-
-myButton.addEventListener('click', async () => { // Use async for Promise handling
-  
-  myButton.classList.add('fade-out');
+myButtonDesktop.addEventListener('click', () => {
+  myButtonDesktop.classList.add('clicked');
+  window.location.href = "https://darksatella.github.io/8-3-Class12T1-2024/";
 });
